@@ -1,0 +1,31 @@
+describe('Autom do Site', () => {
+  it('Visita o site', () => {
+    cy.visit('../src/index.html')
+  })
+  it('Preenche todos os campos e clica em Enviar', () => {
+    cy.visit('../src/index.html')
+    cy.get('#Name').type('QA Teste')
+    cy.get('#Job').type('QA')
+    cy.get('#email').type('qa@io.com')
+    cy.get('#phone').type('11988888888')
+    cy.get('#product').select('mercado')
+    cy.get('input[type="radio"][value="diretoria"]')
+        .each(function($radio){
+        cy.wrap($radio).check()})
+    cy.get('#phone-checkbox').check()   
+    cy.get('#text-area').type('Este é um teste automatizado')   
+    cy.get('#file-upload')
+      .as('fileInput')
+      .attachFile('modelo.txt')      
+    cy.contains("button",'Enviar').click()  
+  })
+  it('Preenche os campos obrigatórios e clica em Enviar',()=>{
+    cy.visit('../src/index.html')
+    cy.get('#Name').type('QA Teste')
+    cy.get('#Job').type('QA')
+    cy.get('#phone').type('11988888888')
+    cy.get('#phone-checkbox').check()  
+    cy.get('#text-area').type('Este é um teste automatizado')
+    cy.contains("button",'Enviar').click()  
+  })
+})
