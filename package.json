@@ -1,0 +1,25 @@
+{
+  "name": "cypress com github actions",
+  "version": "1.0.0",
+  "description": "Curso 'Cypress Avançado com GitHub Actions.",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wlsf82/cypress-do-zero-a-nuvem.git"
+  },
+  "keywords": [
+    "Testing",
+    "Cypress.io",
+    "Cypress",  
+    "GitHub",
+    "GitHub Actions",
+    "Cypress Cloud",
+    "GitHub Actions",
+    "CI/CD"
+  ],
+  "author": "Marcus Souza",
+  "license": "MIT"
+}
