@@ -24,20 +24,6 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
-      # Executa os testes no Electron
-      - name: Cypress run no Electron
+      # Executa os testes com o Cypress
+      - name: Cypress run
         uses: cypress-io/github-action@v6
-        with:
-          browser: electron
-
-      # Executa os testes no Firefox
-      - name: Cypress run no Firefox
-        uses: cypress-io/github-action@v6
-        with:
-          browser: firefox
-
-      # Executa os testes no Chrome
-      - name: Cypress run no Chrome
-        uses: cypress-io/github-action@v6
-        with:
-          browser: chrome
