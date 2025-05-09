@@ -1,5 +1,5 @@
 describe('Autom do Site', () => {
-  it.only('Visita o site', () => {
+  it('Visita o site', () => {
     cy.visit('../src/index.html')
     cy.contains("button",'Enviar').click()
   })
