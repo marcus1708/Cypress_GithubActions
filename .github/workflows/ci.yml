@@ -9,7 +9,7 @@ jobs:
     cypress-run:
         runs-on: ubuntu-22.04
     
-    steps:
+      steps:
         # Faz o checkout do codigo
         - name: Checkout
           uses: actions/checkout@v4
