@@ -48,10 +48,10 @@ describe('Cypress e Github Actions', () => {
     cy.get('#email-checkbox').check()
     cy.get('#phone-checkbox').check()
   })
-  it.only('Seleciona ambos os checkbox e desmarca o primeiro',()=>{
+  it('Seleciona ambos os checkbox e desmarca o primeiro',()=>{
     cy.desmarca_primeiro()
   })
-  it.only('Seleciona ambos os checkbox e desmarca o ultimo',()=>{
+  it('Seleciona ambos os checkbox e desmarca o ultimo',()=>{
     cy.desmarca_segundo()
   })
   it('Preenche a caixa de Texto',()=>{
@@ -65,5 +65,12 @@ describe('Cypress e Github Actions', () => {
   it('Anexa um Arquivo',()=>{
     cy.visit('../src/index.html')
     cy.get('#file-upload').as('fileInput').attachFile('modelo.txt')
+  })
+  it('Preenche os campos obrigatórios',()=>{
+    cy.visit('../src/index.html')
+    cy.Campos_Texto()
+    cy.get('#phone-checkbox').check()
+    cy.get('#text-area').type('Este é um curso de github actions')
+    cy.contains("button",'Enviar').click()
   })
 })
