@@ -18,7 +18,7 @@ Este repositório contém a suíte de testes automatizados end-to-end utilizando
   npx cypress open     # Para abrir a interface do Cypress
   npx cypress run      # Para rodar os testes no terminal
 
-## ⚙️ Execução Automática com GitHub Actions
+## ⚙️ Execução Automática com GitHub Actions !
 
 A suíte de testes é executada automaticamente a cada push ou pull request no branch main.
 
