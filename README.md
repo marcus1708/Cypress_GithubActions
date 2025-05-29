@@ -24,4 +24,4 @@ A suíte de testes é executada automaticamente a cada push ou pull request no b
 
 O arquivo de workflow está localizado em:
 
-.github/workflows/cypress.yml
+.github/workflows/ci.yml
