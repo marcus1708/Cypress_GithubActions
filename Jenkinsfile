@@ -2,20 +2,28 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Clonar repositório') {
             steps {
-                git url: 'https://github.com/marcus1708/Cypress_GithubActions.git'
+                echo 'Clonando repositório...'
             }
         }
-        stage('Build') {
+
+        stage('Instalar dependências') {
             steps {
-                echo 'Rodando build...'
+                sh 'npm install'
             }
         }
-        stage('Test') {
+
+        stage('Executar testes') {
             steps {
-                echo 'Rodando testes...'
+                sh 'npx cypress run'
             }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline finalizado'
         }
     }
 }
